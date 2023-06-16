@@ -24,7 +24,7 @@ const ConversationList: React.FC<ConversationListProps> = ({
   return (
     <aside
       className={clsx(
-        "lg:black fixed inset-y-0 overflow-y-auto border-r border-gray-200 pb-20 lg:left-20 lg:w-80 lg:pb-20",
+        "fixed inset-y-0 overflow-y-auto border-r border-gray-200 pb-20 lg:left-20 lg:block lg:w-80 lg:pb-20",
         isOpen ? "hidden" : "left-0 block w-full"
       )}
     >
