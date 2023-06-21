@@ -25,6 +25,7 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
 }) => {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
+  const uploadPreset = process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET;
 
   const {
     register,
@@ -98,7 +99,7 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
                   <CldUploadButton
                     options={{ maxFiles: 1 }}
                     onUpload={handleUpload}
-                    uploadPreset="b8mzjdio"
+                    uploadPreset={uploadPreset}
                   >
                     <Button disabled={isLoading} secondary type="button">
                       Change

@@ -8,6 +8,7 @@ import MessageInput from "./MessageInput";
 import { CldUploadButton } from "next-cloudinary";
 
 const Form = () => {
+  const uploadPreset = process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET;
   const { conversationId } = useConversation();
   const {
     register,
@@ -41,7 +42,7 @@ const Form = () => {
       <CldUploadButton
         options={{ maxFiles: 1 }}
         onUpload={handleUpload}
-        uploadPreset="b8mzjdio"
+        uploadPreset={uploadPreset}
       >
         <HiPhoto size={30} className="text-sky-500" />
       </CldUploadButton>
